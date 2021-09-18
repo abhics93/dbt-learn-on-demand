@@ -1,0 +1,7 @@
+﻿contact_id,contact_email,contact_is_customer,customer_signup_date,region,industry
+11,contact1@assessment.com,TRUE,,New_England,Consumer Goods
+45,contact2@assessment.com,TRUE,,Central,Consumer Goods
+33,contact3@assessment.com,TRUE,,Central,Entertainment
+66,contact4@assessment.com,TRUE,,West,Entertainment
+13,contact5@assessment.com,FALSE,,Southeast,Tourism
+44,contact6@assessment.com,FALSE,,West,Tourism

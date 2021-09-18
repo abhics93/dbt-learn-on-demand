@@ -1,0 +1,13 @@
+﻿event_id,event_type,event_time,contact_id,email_campaign_id,event_deleted
+1,SEND,,11,1,FALSE
+2,CLICK,,11,1,FALSE
+3,SEND,,45,1,FALSE
+4,CLICK,,45,1,FALSE
+5,OPEN,,11,1,FALSE
+6,OPEN,,45,1,FALSE
+7,SEND,,66,2,FALSE
+8,CLICK,,33,2,FALSE
+9,SEND,,33,2,FALSE
+10,CLICK,,66,2,FALSE
+11,OPEN,,33,2,FALSE
+12,OPEN,,66,2,FALSE
