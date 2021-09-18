@@ -13,3 +13,4 @@ with active_customers as (
 )
 
 select * from active_customers
+

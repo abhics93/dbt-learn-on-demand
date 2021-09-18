@@ -8,7 +8,8 @@ with email_campaigns as (
     
     from {{ source('dbt_achandrasekaran','email_campaigns') }}
 
---  where active = TRUE
+--  where active = TRUE     -- selecting currently running campaigns only 
 )
 
 select * from email_campaigns
+

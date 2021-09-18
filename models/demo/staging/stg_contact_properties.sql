@@ -1,4 +1,4 @@
-with contact_properties as (
+with contact_properties as ( -- a subset of the properties of a contact
 
     select
         contact_id,
@@ -12,3 +12,4 @@ with contact_properties as (
 )
 
 select * from contact_properties
+

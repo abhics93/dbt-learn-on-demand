@@ -16,8 +16,6 @@ email_events as (
 
         -- calculates total events per type per customer
         sum(TOTAL) over(partition by email_campaign_name, event_type, contact_id) as total_events_customer
-        -- calculates total events per type per campaign
-        -- sum(TOTAL) over(partition by email_campaign_name, event_type) as total_events_campaign
 
     from {{ ref('stg_email_events') }}
 
@@ -31,7 +29,6 @@ customer_email_events as (
         customer_region,
         customer_industry,
         event_type,
-        -- total_events_campaign,
 
         {% for event_type in event_types -%}
 
@@ -77,12 +74,12 @@ select
     email_campaign_name,
     customer_region,
     customer_industry,
-    
-    {% for event_type in event_types -%}
-    
+
+    {%- for event_type in event_types -%}
+
     {{event_type}}_EVENTS,
     
-    {%- endfor %}
+    {%- endfor -%}
 
     {% for event_type in event_types -%}
     
