@@ -1,0 +1,34 @@
+version: 2 
+
+sources:
+  - name: dbt_achandrasekaran
+    database: raw
+    tables:
+      - name: email_events
+        freshness:
+          warn_after: {count: 30, period: minute}
+          error_after: {count: 60, period: hour}
+        columns:
+          - name: event_id
+          - name: event_type
+          - name: event_time
+          - name: contact_id
+          - name: email_campaign_id
+          - name: event_deleted
+          
+      - name: email_campaigns
+        columns:
+          - name: email_campaign_id
+          - name: email_campaign_name
+          - name: email_campaign_created_date
+
+      - name: contact_properties
+        freshness: 
+          warn_after: {count: 60, period: minute}
+        columns:
+          - name: contact_id,
+          - name: contact_email
+          - name: contact_is_customer
+          - name: customer_signup_date
+          - name: region
+          - name: industry
